@@ -18,7 +18,30 @@
 
 package sort;
 
+import java.util.Arrays;
+
 public class SortResult<T extends Comparable<T>> {
     private int comparisons;
     private T[] input;
+
+    public SortResult(int comparisons, T[] input) {
+        this.comparisons = comparisons;
+        this.input = input;
+    }
+
+    public int getComparisons() {
+        return comparisons;
+    }
+
+    public T[] getInput() {
+        return input;
+    }
+
+    @Override
+    public String toString() {
+        return "SortResult{" +
+                "comparisons=" + comparisons +
+                ", input=" + Arrays.toString(input) +
+                '}';
+    }
 }
