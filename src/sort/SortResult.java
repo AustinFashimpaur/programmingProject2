@@ -23,6 +23,13 @@ import java.util.Arrays;
 public class SortResult<T extends Comparable<T>> {
     private int comparisons;
     private T[] input;
+    private T[] output;
+
+    public SortResult(int comparisons, T[] input, T[] output) {
+        this.comparisons = comparisons;
+        this.input = input;
+        this.output = output;
+    }
 
     public SortResult(int comparisons, T[] input) {
         this.comparisons = comparisons;
@@ -37,11 +44,16 @@ public class SortResult<T extends Comparable<T>> {
         return input;
     }
 
+    public T[] getOutput() {
+        return output;
+    }
+
     @Override
     public String toString() {
         return "SortResult{" +
                 "comparisons=" + comparisons +
                 ", input=" + Arrays.toString(input) +
+                ", output=" + Arrays.toString(output) +
                 '}';
     }
 }
