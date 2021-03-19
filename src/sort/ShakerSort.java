@@ -53,7 +53,7 @@ public class ShakerSort<T extends Comparable<T>> {
             }
 
             // the last step moved the smallest number into the current start, no need to look at it further
-            start = start + 1;
+            start++;
         }
         return new SortResult<>(comparisons, input, output);
     }
