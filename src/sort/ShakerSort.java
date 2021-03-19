@@ -33,7 +33,7 @@ public class ShakerSort<T extends Comparable<T>> {
 
             for (int i = start; i < end - 1; ++i) {
                 if (output[i].compareTo(output[i + 1]) > 0) {
-                    comparisons = comparisons + 1;
+                    comparisons++;
                     swap(output, i, i + 1);
                     swapped = true;
                 }
@@ -46,7 +46,7 @@ public class ShakerSort<T extends Comparable<T>> {
 
             for (int j = end - 1; j > start; j--) {
                 if (output[j].compareTo(output[j - 1]) < 0) {
-                    comparisons = comparisons + 1;
+                    comparisons++;
                     swap(output, j, j - 1);
                     swapped = true;
                 }
