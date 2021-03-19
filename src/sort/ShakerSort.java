@@ -33,10 +33,10 @@ public class ShakerSort<T extends Comparable<T>> {
 
             for (int i = start; i < end - 1; ++i) {
                 if (output[i].compareTo(output[i + 1]) > 0) {
-                    comparisons++;
                     swap(output, i, i + 1);
                     swapped = true;
                 }
+                comparisons++;
             }
 
             // Nothing changed, can short-circuit
@@ -46,10 +46,10 @@ public class ShakerSort<T extends Comparable<T>> {
 
             for (int j = end - 1; j > start; j--) {
                 if (output[j].compareTo(output[j - 1]) < 0) {
-                    comparisons++;
                     swap(output, j, j - 1);
                     swapped = true;
                 }
+                comparisons++;
             }
 
             // the last step moved the smallest number into the current start, no need to look at it further
