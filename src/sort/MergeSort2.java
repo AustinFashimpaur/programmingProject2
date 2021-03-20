@@ -1,4 +1,4 @@
-package tutorials;
+package sort;
 
 import java.util.*;
 
