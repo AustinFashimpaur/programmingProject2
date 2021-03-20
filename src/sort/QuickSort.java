@@ -7,6 +7,7 @@ public class QuickSort<T extends Comparable<T>> {
     private int comparisons;
 
     public SortResult<T> sort(T[] input) {
+        comparisons = 0;
         output = Arrays.copyOf(input, input.length);
         branchDown(output, 0, output.length - 1);
         return new SortResult<>(comparisons, input, output);
