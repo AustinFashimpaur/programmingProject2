@@ -64,20 +64,20 @@ public class ShakerSort<T extends Comparable<T>> {
         input[j] = temp;
     }
 
-    public static void main(String[] args) {
-        // Tests here
-        ShakerSort<Integer> shakerSort = new ShakerSort<>();
-
-        Integer[][] testArrays = {
-                {1, 2, 3, 4, 5, 6, 7},
-                {7, 6, 5, 4, 3, 2, 1},
-                {1, 3, 2, 4, 5, 7},
-                {1, 5, 2, 10, 10000, 6},
-                {1, 5, 2, 5, 3, 5, 4, 6}
-        };
-
-        Arrays.stream(testArrays).sequential().forEach(array -> {
-            System.out.println(shakerSort.sort(array));
-        });
-    }
+//    public static void main(String[] args) {
+//        // Tests here
+//        ShakerSort<Integer> shakerSort = new ShakerSort<>();
+//
+//        Integer[][] testArrays = {
+//                {1, 2, 3, 4, 5, 6, 7},
+//                {7, 6, 5, 4, 3, 2, 1},
+//                {1, 3, 2, 4, 5, 7},
+//                {1, 5, 2, 10, 10000, 6},
+//                {1, 5, 2, 5, 3, 5, 4, 6}
+//        };
+//
+//        Arrays.stream(testArrays).sequential().forEach(array -> {
+//            System.out.println(shakerSort.sort(array));
+//        });
+//    }
 }
