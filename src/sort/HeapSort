@@ -31,7 +31,7 @@ public class HeapSort<T extends Comparable<T>>
         }
     }
     
-    void heapify(int T[], int k, int l)
+    public void heapify(int T[], int k, int l)
     {
         int largest = l;
         int v = 2 * l + 1;
