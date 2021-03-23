@@ -1,48 +1,46 @@
 package sort;
 
-import java.util.*;
-
 public class HeapSort<T extends Comparable<T>>
 {
     private T[] output;
     private int comparisons = 0;
     
-    public SortResult<T> sort(T[] input)
-    {
-        output = Arrays.copyOf(input, input.length);
-        return new SortResult<>(comparisons, input, output);
-    }
+//    public SortResult<T> sort(T[] input)
+//    {
+//        output = Arrays.copyOf(input, input.length);
+//        return new SortResult<>(comparisons, input, output);
+//    }
     
-    public void sort(int T[])
+    public void sort(T[] input)
     {
-        int n = T.length;
+        int n = input.length;
  
         for (int i = n/2 - 1; i >= 0; i--)
         {
-            heapify(T, n, i);
+            heapify(input, n, i);
             comparisons++;
         }
 
         for (int i = n - 1; i > 0; i--) 
         {
             swap(0, i);
-            heapify(T, i, 0);
+            heapify(input, i, 0);
             comparisons++;
         }
     }
     
-    public void heapify(int T[], int k, int l)
+    public void heapify(T[] input, int k, int l)
     {
         int largest = l;
         int v = 2 * l + 1;
         int r = 2 * l + 2;
  
-        if (v < k && T[v] > T[largest])
+        if (v < k && input[v].compareTo(input[largest]) < 0)
         {
             largest = v;
         }
 
-        if (r < k && T[r] > T[largest])
+        if (r < k && input[r].compareTo(input[largest]) > 0)
         {
             largest = r;
         }

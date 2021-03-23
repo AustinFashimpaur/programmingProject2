@@ -1,6 +1,6 @@
-package tutorials;
+package sort;
 
-import java.util.*;
+import java.util.Arrays;
 
 /**
  * Represents a class that calculates the number of comparisons Merge Sort uses for n number of elements. The worst-case number of
