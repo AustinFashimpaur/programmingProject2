@@ -14,7 +14,6 @@ public class Permutation {
         for (int i = 1; i <= n; i++) {
             intervals *= i;
         }
-        System.out.println(intervals);
         array3d.add(item);
         for(int i = 1; i < intervals; i++) {
             item = nextPermutation(item);
