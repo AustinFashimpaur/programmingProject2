@@ -18,12 +18,9 @@
 
 package sort;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Scanner;
 
 public class TestDriver {
     public static void main(String[] args) throws FileNotFoundException {
@@ -37,30 +34,18 @@ public class TestDriver {
         sorters.add(quickSorter);
         sorters.add(shakerSorter);
 
-        File nIs4 = new File("./files/n4.csv");
-        File nIs6 = new File("./files/n6.csv");
-        File nIs8 = new File("./files/n8.csv");
-        List<File> files = new ArrayList<>();
-        files.add(nIs4);
-        files.add(nIs6);
-        files.add(nIs8);
+        Permutation permuter = new Permutation();
 
+        int[] ns = {4, 6, 8};
         for (Sort<Integer> sorter : sorters) {
-            System.out.println("------ " + sorter.getClass().getName() + " ------");
-            for (File file : files) {
-                System.out.println("------ " + file.getName() + " -------");
-                Scanner reader = new Scanner(file);
-                while (reader.hasNextLine()) {
-                    Integer[] nums = Arrays.stream(
-                            reader.nextLine()
-                                    .replaceAll("\\s", "")
-                                    .split(","))
-                            .mapToInt(Integer::parseInt)
-                            .boxed()
-                            .toArray(Integer[]::new);
-                    System.out.println(sorter.sort(nums));
+            System.out.println("****** " + sorter.getClass().getName() + " *****");
+            for (int n : ns) {
+                System.out.println("--- " + "n=" + n + " ---");
+                List<List<Integer>> permutations = permuter.createPermutations(n);
+                for (List<Integer> permutation: permutations) {
+                    Integer[] permutationsArr = permutation.toArray(Integer[]::new);
+                    System.out.println(sorter.sort(permutationsArr));
                 }
-                System.out.println("\n\n");
             }
             System.out.println("\n\n\n");
         }
