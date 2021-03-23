@@ -2,7 +2,7 @@ package sort;
 
 import java.util.Arrays;
 
-public class ShakerSort<T extends Comparable<T>> {
+public class ShakerSort<T extends Comparable<T>> implements Sort<T> {
     public SortResult<T> sort(T[] input) {
         T[] output = Arrays.copyOf(input, input.length);
         boolean swapped = true;

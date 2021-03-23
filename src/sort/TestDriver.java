@@ -20,22 +20,15 @@ package sort;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 
 public class TestDriver {
 
-    private void callTestCase() {
-
-    }
-
     public static void main(String[] args) throws FileNotFoundException {
-        File nIs4 = new File("nIs4.txt");
-        File nIs6 = new File("nIs6.txt");
-        File nIs8 = new File("nIs8.txt");
+        File nIs4 = new File("n4.txt");
+        File nIs6 = new File("n6.txt");
+        File nIs8 = new File("n8.txt");
 
         HeapSort<Integer> heapSorter = new HeapSort<>();
         MergeSort2<Integer> mergeSorter = new MergeSort2<>();
@@ -54,7 +47,6 @@ public class TestDriver {
             mergeSorter.sort(nums2);
             quickSorter.sort(nums2);
             shakerSorter.sort(nums2);
-
         }
 
         // create list of all permutations for n=6

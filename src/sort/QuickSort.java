@@ -2,7 +2,7 @@ package sort;
 
 import java.util.Arrays;
 
-public class QuickSort<T extends Comparable<T>> {
+public class QuickSort<T extends Comparable<T>> implements Sort<T> {
     private T[] output;
     private int comparisons;
 

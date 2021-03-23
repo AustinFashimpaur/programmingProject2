@@ -15,7 +15,7 @@ import java.util.Arrays;
  *
  *   
  */
-public class MergeSort2<T extends Comparable<T>> {
+public class MergeSort2<T extends Comparable<T>> implements Sort<T> {
 	
 	
 	private T[] output;

@@ -1,6 +1,6 @@
 package sort;
 
-public class HeapSort<T extends Comparable<T>>
+public class HeapSort<T extends Comparable<T>> implements Sort<T>
 {
     private T[] output;
     private int comparisons = 0;
