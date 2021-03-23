@@ -51,7 +51,10 @@ public class TestDriver {
                 System.out.println("------ " + file.getName() + " -------");
                 Scanner reader = new Scanner(file);
                 while (reader.hasNextLine()) {
-                    Integer[] nums = Arrays.stream(reader.nextLine().replaceAll("\\s", "").split(","))
+                    Integer[] nums = Arrays.stream(
+                            reader.nextLine()
+                                    .replaceAll("\\s", "")
+                                    .split(","))
                             .mapToInt(Integer::parseInt)
                             .boxed()
                             .toArray(Integer[]::new);
