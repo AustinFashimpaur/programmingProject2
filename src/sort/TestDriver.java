@@ -23,8 +23,7 @@ public class TestDriver {
             for (int n : ns) {
                 System.out.println("--- " + "n=" + n + " ---");
                 Analyzer<Integer> analyzer = new Analyzer<>();
-                List<List<Integer>> permutations = permuter.createPermutations(n);
-                for (List<Integer> permutation: permutations) {
+                for (List<Integer> permutation: permuter.createPermutations(n)) {
                     Integer[] permutationsArr = permutation.toArray(Integer[]::new);
                     analyzer.addResult(sorter.sort(permutationsArr));
                 }
