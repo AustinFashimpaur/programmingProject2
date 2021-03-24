@@ -41,11 +41,15 @@ public class TestDriver {
             System.out.println("****** " + sorter.getClass().getName() + " *****");
             for (int n : ns) {
                 System.out.println("--- " + "n=" + n + " ---");
+                Analyzer<Integer> analyzer = new Analyzer<>();
                 List<List<Integer>> permutations = permuter.createPermutations(n);
                 for (List<Integer> permutation: permutations) {
                     Integer[] permutationsArr = permutation.toArray(Integer[]::new);
-                    System.out.println(sorter.sort(permutationsArr));
+                    analyzer.addResult(sorter.sort(permutationsArr));
                 }
+                System.out.println("10 best cases: " + analyzer.bestCases(10));
+                System.out.println("Average case: " + analyzer.averageCase());
+                System.out.println("10 worst cases: " + analyzer.worstCases(10));
             }
             System.out.println("\n\n\n");
         }
