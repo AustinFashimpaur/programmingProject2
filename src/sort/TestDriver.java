@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TestDriver {
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
 //        HeapSort<Integer> heapSorter = new HeapSort<>();
         MergeSort2<Integer> mergeSorter = new MergeSort2<>();
         QuickSort<Integer> quickSorter = new QuickSort<>();
