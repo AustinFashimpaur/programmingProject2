@@ -45,13 +45,9 @@ public class HeapSort<T extends Comparable<T>> implements Sort<T> {
 
 		if (v < k && input[v].compareTo(input[largest]) < 0) {
 			largest = v;
-		}
-
-		if (r < k && input[r].compareTo(input[largest]) > 0) {
+		} else if (r < k && input[r].compareTo(input[largest]) > 0) {
 			largest = r;
-		}
-
-		if (largest != l) {
+		}else if (largest != l) {
 			swap(l, largest);
 		}
 	}
