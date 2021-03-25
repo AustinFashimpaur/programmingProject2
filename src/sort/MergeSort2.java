@@ -47,10 +47,11 @@ public class MergeSort2<T extends Comparable<T>> implements Sort<T> {
 	 * @return SortResult object comprising the number of comparisons, the initial input and the sorted array.
 	 */
 	public SortResult<T> sort(T[] input) {
-		int temp = comparisons;
+		
 		resetComparisons();
 		T[] initialInput = Arrays.copyOf(input, input.length);
 		this.output = mergeSort(input);
+		int temp = comparisons;
 		return new SortResult<T>(temp, initialInput, output);
 	}
 	
@@ -67,7 +68,7 @@ public class MergeSort2<T extends Comparable<T>> implements Sort<T> {
 	 * @return a sorted list
 	 */
 	@SuppressWarnings("unchecked")
-	private T[] mergeSort(T[] list) {
+	public T[] mergeSort(T[] list) {
 		// If list is empty; no need to do anything
 		if (list.length <= 1) {	return list; }
 
@@ -132,6 +133,14 @@ public class MergeSort2<T extends Comparable<T>> implements Sort<T> {
 	 * resetComparisons(); } }
 	 */
 		 
+	
+	/*
+	 * public static void main(String[] args) { Integer[] test = {0,1,2,3,4,5,6,7};
+	 * MergeSort2<Integer> ms = new MergeSort2<Integer>(); ms.mergeSort(test);
+	 * System.out.println(Arrays.deepToString(test));
+	 * System.out.println("Comparisons: " + ms.comparisons); }
+	 */
+	
 
 // ..........................................................FOR TESTING.................................................................
 
