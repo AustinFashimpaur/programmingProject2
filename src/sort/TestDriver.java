@@ -5,12 +5,12 @@ import java.util.List;
 
 public class TestDriver {
     public static void main(String[] args) {
-//        HeapSort<Integer> heapSorter = new HeapSort<>();
+        HeapSort<Integer> heapSorter = new HeapSort<>();
         MergeSort2<Integer> mergeSorter = new MergeSort2<>();
         QuickSort<Integer> quickSorter = new QuickSort<>();
         ShakerSort<Integer> shakerSorter = new ShakerSort<>();
         List<Sort<Integer>> sorters = new ArrayList<>();
-//        sorters.add(heapSorter);
+        sorters.add(heapSorter);
         sorters.add(mergeSorter);
         sorters.add(quickSorter);
         sorters.add(shakerSorter);
