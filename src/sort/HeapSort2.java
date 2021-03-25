@@ -63,12 +63,12 @@ public class HeapSort2<T extends Comparable<T>> implements Sort<T> {
             largest = l;
         } else if (r < n && arr[r].compareTo(arr[largest]) > 0) {
             largest = r;
+            comparisonCount++;
         }
         comparisonCount++;
 
         // If largest is not root
         if (largest != i) {
-            //totalComparisons++;
             T swap = arr[i];
             arr[i] = arr[largest];
             arr[largest] = swap;
