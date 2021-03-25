@@ -134,13 +134,12 @@ public class MergeSort2<T extends Comparable<T>> implements Sort<T> {
 	 */
 		 
 	
-	public static void main(String[] args) {
-	Integer[] test = {0,1,2,3,4,5,6,7};
-	MergeSort2<Integer> ms = new MergeSort2<Integer>();
-	ms.mergeSort(test);
-	System.out.println(Arrays.deepToString(test));
-	System.out.println("Comparisons: " + ms.comparisons);
-	}
+	/*
+	 * public static void main(String[] args) { Integer[] test = {0,1,2,3,4,5,6,7};
+	 * MergeSort2<Integer> ms = new MergeSort2<Integer>(); ms.mergeSort(test);
+	 * System.out.println(Arrays.deepToString(test));
+	 * System.out.println("Comparisons: " + ms.comparisons); }
+	 */
 	
 
 // ..........................................................FOR TESTING.................................................................
