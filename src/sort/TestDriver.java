@@ -5,7 +5,7 @@ import java.util.List;
 
 public class TestDriver {
     public static void main(String[] args) {
-        HeapSort<Integer> heapSorter = new HeapSort<>();
+        HeapSort2<Integer> heapSorter = new HeapSort2<>();
         MergeSort2<Integer> mergeSorter = new MergeSort2<>();
         QuickSort<Integer> quickSorter = new QuickSort<>();
         ShakerSort<Integer> shakerSorter = new ShakerSort<>();
